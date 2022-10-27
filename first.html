@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html> 
+<style>
+    body{
+        background-color: MediumSeaGreen;  
+        padding: 20px;
+        
+    }
+    
+    h3{
+        font-family: Garamond, serif;
+        font-size: 60px; 
+        position: relative;
+        left: 400px; 
+        
+    }
+
+    .name .name{
+        border-radius: 10px;
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 20px; 
+        left: 600px;
+        height: 40px;
+        background: lightgray;
+        cursor:pointer;
+        
+    }
+    .pass .pass{
+        border-radius: 10px;
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 20px;
+        left: 600px;
+        height: 40px; 
+        background: coral;
+        cursor:pointer;
+         
+    }
+    .email .email{
+        border-radius: 10px;
+        position: relative;
+        font-family: Garamond, serif;
+        font-size: 20px;
+        left: 600px; 
+        height: 40px;
+        background: CornflowerBlue; 
+        background-left: 10px;
+        cursor:pointer;
+    }
+    .occ .occ{
+        border-radius: 10px;
+        position: relative; 
+        font-family: Garamond, serif; 
+        font-size: 20px;
+        left: 600px;
+        height: 40px;
+        background: DarkCyan;
+        cursor:pointer;
+        
+    }
+    .states .states{
+        border-radius: 10px;
+        font-size: 20px;
+        position: relative;
+        font-family: Garamond, serif;
+        left: 600px; 
+        height: 40px;
+        background: gold;
+        cursor: pointer;
+    }
+
+    .submit{
+        font-family: Garamond, serif; 
+        font-size: 20px; 
+        border-radius: 10px;
+        position: relative;
+        top: 100px; 
+        left: 900px;
+    }
+    .submit:hover{
+        animation-name: rotation; 
+        animation-duration: 3s; 
+        cursor: pointer;
+    }
+    @keyframes rotation{
+        0% {background-color: gray; }
+        25% {background-color: MediumPurple; }
+        50%{background-color: azure; }
+        75%{background-color: PaleGreen; }
+        100%{background-color: PaleVioletRed; }
+
+    }
+
+   
+</style>
+<body>
+   
+    <form action"end.html" method = "post">
+        {% csrf_token %}
+        
+        <title> My Django Form </title> 
+        <h3> Welcome to my Django Form! </h3>
+        <div class="name">
+        {{ form.name }}
+        </div> 
+        <br>
+        <div class="email">
+        {{ form.email }}
+        </div>
+        <br> 
+        <div class="pass">
+        {{ form.password }}
+        </div> 
+        <br>
+        <div class="occ">
+        {{ form.occupation }}
+        </div> 
+        <br>
+        <div class="states">
+            {{ form.states }}
+            </div>
+        
+        <input type = "submit"  value = "Submit" class="submit"/>
+    
+        
+    </form>
+</body>
+</html>
